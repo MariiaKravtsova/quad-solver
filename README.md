@@ -1,1 +1,3 @@
 # quad-solver
+
+hi mariia :)
