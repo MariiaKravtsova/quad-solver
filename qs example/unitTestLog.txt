@@ -1,0 +1,6 @@
+x1: -1.000000 assert not equal -2.000000
+x2: -1.000000 assert not equal -2.000000
+x1: 0.500000 assert equal 0.500000
+x2: -3.000000 assert equal -3.000000
+x1: -nan assert equal 0.500000
+x2: -nan assert equal -3.000000

@@ -1,0 +1,133 @@
+.TH "tests/t_lib.c" 3 "Mon Mar 24 2014" "Version 0.95" "CUnit Test Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+tests/t_lib.c \- 
+.PP
+Initialize CUnit framework and unit tests for add\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'CUnit/Basic\&.h'\fP
+.br
+\fC#include '\&.\&./src/lib\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBtest_add\fP (void)"
+.br
+.RI "\fIA test function for \fBadd(int a, int b)\fP \fP"
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.RI "\fIFunction to initalize CUnit and runs test\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Initialize CUnit framework and unit tests for add\&. 
+
+
+.PP
+\fBDate:\fP
+.RS 4
+3/20/14 
+.RE
+.PP
+\fBAuthor:\fP
+.RS 4
+Owen Watson
+.RE
+.PP
+.SS "Description"
+.PP
+\fBt_lib\&.c\fP defines a test function for add, which contains many asserts for the \fBadd(int a, int b)\fP function\&. The CUnit test suite is also setup here\&. This involes setting up the test registry, which contains all test suites, and adding the test (test_add) to the suite\&. Following this setup, all the test are run using the basic interface\&. 
+.PP
+Definition in file \fBt_lib\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (intargc, char **argv)"
+
+.PP
+Function to initalize CUnit and runs test\&. 
+.SS "Description"
+.PP
+The main fucntion initializes the CUnit test registry, adds a suite to the registry, adds the tests to the suite, and runs all test using the CUnit Basic interface\&. The Basic interface outputs to stdout\&.
+.PP
+.SS "Unit Documentation"
+.PP
+The active CUnit test registry must be initialized before use\&. The user should call \fBCU_initialize_registry()\fP before calling any other CUnit functions\&.
+.PP
+When testing is complete, the user should call \fBCU_cleanup_registry()\fP to clean up and release memory used by the framework\&. This should be the last CUnit function called (except for restoring the test registry using \fBCU_initialize_registry()\fP or \fBCU_set_registry()\fP)\&.
+.PP
+\fBCU_add_suite\fP creates a new test collection (suite) having the specified name ,initialization function, and cleanup function\&. The new suite is registered with (and owned by) the test registry, so the registry must be initialized before adding any suites\&.
+.PP
+\fBCU_add_test\fP creates a new test having the specified name and test function, and registers it with the specified suite\&. The suite must already have been created using \fBCU_add_suite()\fP\&.
+.PP
+The basic interface is also non-interactive, with results output to stdout\&. This interface supports running individual suites or tests, and allows client code to control the type of output displayed during each run\&.
+.PP
+\fBCU_basic_set_mode(CU_BasicRunMode mode)\fP sets the basic run mode, which controls the output during test runs\&.
+.PP
+Basic run mode choices are:
+.IP "\(bu" 2
+\fBCU_BRM_NORMAL\fP Failures and run summary are printed
+.IP "\(bu" 2
+\fBCU_BRM_SILENT\fP No output is printed except error messages
+.IP "\(bu" 2
+\fBCU_BRM_VERBOSE\fP Maximum output of run details [used here]
+.PP
+.PP
+\fBCU_basic_run_tests\fP runs all tests in all registered suites\&. Returns the 1st error code occurring during the test run\&.
+.PP
+\fBCU_get_error()\fP returns error status\&.
+.PP
+List of error codes returned by \fBCU_get_error()\fP: http://cunit.sourceforge.net/doc/error_handling.html
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargc\fP (argument count) the number of arguments entered 
+.br
+\fIargv\fP (argument vector) an array of pointer to arrays of char objects
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+CU_get_error() - framework error status 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file t_lib\&.c\&.
+.SS "void test_add (void)"
+
+.PP
+A test function for \fBadd(int a, int b)\fP 
+.SS "Description"
+.PP
+test_add contains the logical testing for add\&.
+.PP
+.SS "Test Function Information"
+.PP
+There are no restrictions on the content of a test function, except that is should not modify the CUnit framework (e\&.g add suites or tests, modify the registry, or initiate a test run\&.) Registering a test will cause it's function to be run when the test is run\&.
+.PP
+List of CUnit assertions: http://cunit.sourceforge.net/doc/writing_tests.html
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvoid\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file t_lib\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CUnit Test Project from the source code\&.
