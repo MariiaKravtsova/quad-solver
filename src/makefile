@@ -1,5 +1,10 @@
-main:
-	gcc -o qsolve qsolve.c io.c parse.c
+CC = gcc
+Flags = -o
+
+qsolve: main/qsolve.c io/io.c parse/parse.c
+
+comp:
+	gcc -o qsolve main/qsolve.c io/io.c parse/parse.c
 
 run:
 	./qsolve

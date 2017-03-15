@@ -1,3 +1,5 @@
+// FILE: parse.c
+
 #include "parse.h"
 
 int parse(char * line, double nums[]){

@@ -1,3 +1,5 @@
+// FILE: io.c
+
 #include "qsolve.h"
 
 int input(char * line, size_t size){
