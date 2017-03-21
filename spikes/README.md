@@ -1,22 +1,13 @@
-# Quad Solver
-This project is to create a program to solve the quadratic equation for computer scientists. This is going to be ran from a command line.
-This needs to be ran on linux using GCC -wall -pedantic. We will be using CUnit for testing and make for automation. For our coding standard we are going to use C99.
-## Installation
-source code is found in the sorce folder
+# Spikes
 
-compile with make and run using make run
+Spikes are examples of code that we wrote to learn how things work, and test how
+the code will behave if we add it to our implementation.
 
-there is also a make clean command that can be used if needed
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
+In the process of figuring out and building the quad solver, here are some of the things we have spiked:
 
-## Credits
-Anna Stephens, Mike Bell, Mariia Kravtsova
-
-
-## License
-GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+* Makefiles
+* IEEE floating points
+* small quad solver equations
+* parsing user input and user output
+* CUnit
+* Mock Objects
