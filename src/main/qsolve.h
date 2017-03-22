@@ -16,3 +16,4 @@ int input(char * line, size_t size);
 //int parse(char * line, double nums[]);
 void solve(double nums[], double roots[]);
 void output(float root1, float root2);
+double mysqrt(double value);
