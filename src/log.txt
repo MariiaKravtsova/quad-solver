@@ -1,0 +1,7 @@
+Opening the log file. 
+Running the main function in qsolve.c
+Grabbing input 
+Parsing line and checking for valid input
+Solving quadratic function 
+Inside the solve function 
+Closing Log File

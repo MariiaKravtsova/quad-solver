@@ -1,4 +1,5 @@
 // FILE: mysqrt.c
+#include <math.h>
 
 #include "../main/qsolve.h"
 
