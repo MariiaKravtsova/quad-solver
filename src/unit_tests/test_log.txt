@@ -1,0 +1,25 @@
+Starting Unit Tests: parse
+Error Count: 0
+End of Unit Tests: parse
+
+Starting Unit Tests: mysqrt
+Error Count: 0
+End of Unit Tests: mysqrt
+
+Starting Unit Tests: qsolve
+Error Count: 0
+End of Unit Tests: qsolve
+
+Starting Unit Tests: parse
+Error Count: 0
+End of Unit Tests: parse
+
+Starting Unit Tests: mysqrt
+Test 1 Failed: '-1.234'
+Error Count: 1
+End of Unit Tests: mysqrt
+
+Starting Unit Tests: qsolve
+Error Count: 0
+End of Unit Tests: qsolve
+

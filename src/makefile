@@ -1,16 +1,29 @@
 CC = gcc
 Flags = -o
 
-qsolve: main/qsolve.c io/io.c parse/parse.c
 
 comp:
-	gcc -o qsolve main/qsolve.c io/io.c parse/parse.c mysqrt/mysqrt.c
+	gcc -o runthis main/main.c io/io.c parse/parse.c qsolve/qsolve.c mysqrt/mysqrt.c
+
+log:
+	gcc -o runthis main/main.c io/io.c parse/parse.c qsolve/qsolve.c mysqrt/mysqrt.c -DLOG
+
+debug:
+	gcc -o runthis main/main.c io/io.c parse/parse.c qsolve/qsolve.c mysqrt/mysqrt.c -DDEBUG
 
 mach:
-	gcc -o qsolve main/qsolve.c io/io.c parse/parse.c mysqrt/mach_mysqrt.c
+	gcc -o runthis main/main.c io/io.c parse/parse.c qsolve/qsolve.c mysqrt/mach_mysqrt.c
 
 run:
-	./qsolve
+	./runthis
+
+utest:
+	gcc -o unit_tests/utest_parse unit_tests/utest_parse.c parse/parse.c
+	./unit_tests/utest_parse
+	gcc -o unit_tests/utest_mysqrt unit_tests/utest_mysqrt.c mysqrt/mysqrt.c
+	./unit_tests/utest_mysqrt
+	gcc -o unit_tests/utest_qsolve unit_tests/utest_qsolve.c qsolve/qsolve.c mysqrt/mach_mysqrt.c
+	./unit_tests/utest_qsolve
 
 clean:
 	rm -f *.o *.out

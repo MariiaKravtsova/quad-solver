@@ -1,6 +1,6 @@
 // FILE: io.c
 
-#include "../main/qsolve.h"
+#include "../main/main.h"
 
 int input(char * line, size_t size){
 

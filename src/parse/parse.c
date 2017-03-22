@@ -12,8 +12,10 @@ int parse(char * line, double nums[]){
 
 	while(token != NULL){
 		count++;
-		nums[count] = atof(token);
-		if (nums[count]  != nums[count]) result = -1; // check for NaN
+		
+		if (!(token[0] >= '0' && token[0] <= '9')) result = -1; // check that input is a number
+
+		if(count<3) nums[count] = atof(token);
 		
 		token = strtok(NULL," ");
 	}
@@ -23,7 +25,7 @@ int parse(char * line, double nums[]){
 		printf("nums[2]: %f\n",nums[2]);
 	#endif
 
-	if (count < 0) result = -2;
+	if (count < 2) result = -2;
 	if (count > 2) result = -3;
 
 	return result;
